@@ -1,0 +1,42 @@
+
+/ {
+    #define HRM(NAME, HOLD, TAP, TRIGGER_POS) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            #binding-cells = <2>; \
+            flavor = "balanced"; \
+            tapping-term-ms = <280>; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            require-prior-idle-ms = <100>; \
+            bindings = <HOLD>, <TAP>; \
+            hold-trigger-key-positions = <TRIGGER_POS>; \
+            hold-trigger-on-release; \
+        };
+
+    #define HOLD_TAP(NAME, HOLD, TAP) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            #binding-cells = <2>; \
+            flavor = "balanced"; \
+            tapping-term-ms = <175>; \
+            quick-tap-ms = <0>; \
+            bindings = <HOLD>, <TAP>; \
+        };
+
+    HRM(hml, &kp, &kp, KEYS_R THUMBS WAY ENCODER)  // left-hand HRMs
+    HRM(hmr, &kp, &kp, KEYS_L THUMBS WAY ENCODER)  // right-hand HRMs
+    HRM(lpar_hml, &kp, &morph_lpar, KEYS_R THUMBS WAY ENCODER)
+    HRM(lbkt_hml, &kp, &morph_lbkt, KEYS_R THUMBS WAY ENCODER)
+    HRM(lbrc_hml, &kp, &morph_lbrc, KEYS_R THUMBS WAY ENCODER)
+    HRM(hmld, &kp, &nds, KEYS_R THUMBS WAY ENCODER)
+    HRM(hmrd, &kp, &nds, KEYS_L THUMBS WAY ENCODER)
+
+    HOLD_TAP(lt_spc, &mo, &morph_spc)
+    HOLD_TAP(lt_shift, &mo, &morph_shift)
+    HOLD_TAP(lt_bspc, &mo, &morph_bspc)
+    HOLD_TAP(lt_repeat, &mo, &morph_repeat)
+
+    HOLD_TAP(mt_magic1, &kp, &morph_magic1)
+    HOLD_TAP(mt_magic2, &kp, &morph_magic2)
+
+};

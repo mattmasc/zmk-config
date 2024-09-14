@@ -1,0 +1,28 @@
+/*          40 KEY MATRIX / LAYOUT MAPPING
+    ╭─────────────────────┬─────────────────────╮
+╭───╯ LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 ╰───╮
+│ LM5 LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 RM5 │
+│ LB5 LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 RB5 │
+╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+╭───────────┴────────┬────┴──────────┬──┴──╮
+│ WL  WD  WU  WR  WC │               │ ENC │
+╰────────────────────╯               ╰─────╯*/
+
+&leader {
+	timeout-ms = <500>;
+};
+
+/ {
+	#define LEADER_SEQ(NAME, KEYPOS, BINDINGS, LAYERS) \
+		NAME { \
+			key-positions = <KEYPOS>; \
+			bindings = <BINDINGS>; \
+			layers = <LAYERS>; \
+		};
+
+	leader_sequences {
+		compatible = "zmk,leader-sequences";
+
+		LEADER_SEQ(ld_braces, LB3 LM2 , &mc_braces, DEF)
+	};
+};

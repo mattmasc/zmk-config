@@ -1,0 +1,3 @@
+[submodule "modules/mattmasc/zmk"]
+	path = modules/mattmasc/zmk
+	url = https://github.com/mattmasc/zmk

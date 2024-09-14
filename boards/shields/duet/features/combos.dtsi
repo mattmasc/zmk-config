@@ -1,0 +1,49 @@
+/*          40 KEY MATRIX / LAYOUT MAPPING
+    ╭─────────────────────┬─────────────────────╮
+╭───╯ LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 ╰───╮
+│ LM5 LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 RM5 │
+│ LB5 LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 RB5 │
+╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+╭───────────┴────────┬────┴──────────┬──┴──╮
+│ WL  WD  WU  WR  WC │               │ ENC │
+╰────────────────────╯               ╰─────╯*/
+
+// use require-prior-idle-ms for combos
+#undef COMBO_HOOK
+#define COMBO_HOOK require-prior-idle-ms = <150>;
+
+#define COMBO_TERM_FAST 18
+#define COMBO_TERM_SLOW 30
+
+/ {
+    #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TIMEOUT) \
+        NAME { \
+            timeout-ms = <TIMEOUT>; \
+            layers = <LAYERS>; \
+            key-positions = <KEYPOS>; \
+            bindings = <BINDINGS>; \
+        };
+
+    combos {
+        compatible = "zmk,combos";
+
+        COMBO(tab,  &kp TAB,   LT0 LM0,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(lpar,  &morph_lpar,   LT1 LM1,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(lbkt,  &morph_lbkt,   LT2 LM2,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(lbrc,  &morph_lbrc,   LT3 LM3,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(selword,  &mc_selword,   LM0 LB0,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(hash,  &kp HASH,   LM1 LB1,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(bslh,  &kp BSLH,   LM2 LB2,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(star,  &kp STAR,   LM3 LB3,  DEF QWERTY,  COMBO_TERM_FAST)
+
+        COMBO(esc,  &kp ESC,   RT0 RM0,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(lt,  &morph_lt,   RT1 RM1,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(at,  &kp AT,   RT2 RM2,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(prcnt,  &kp PRCNT,   RT3 RM3,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(selline,  &mc_selline,   RM0 RB0,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(amps,  &kp AMPS,   RM1 RB1,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(excl,  &kp EXCL,   RM2 RB2,  DEF QWERTY,  COMBO_TERM_FAST)
+        COMBO(dllr,  &kp DLLR,   RM3 RB3,  DEF QWERTY,  COMBO_TERM_FAST)
+
+    };
+};

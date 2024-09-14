@@ -1,0 +1,426 @@
+layers:
+  default:
+  - X
+  - P
+  - L
+  - M
+  - K
+  - ','
+  - W
+  - O
+  - U
+  - Q
+  - '`'
+  - {t: S, h: Gui+ Alt}
+  - {t: N, h: Alt}
+  - {t: R, h: Shift}
+  - {t: T, h: Ctrl}
+  - G
+  - Y
+  - {t: C, h: Ctrl}
+  - {t: A, h: Shift}
+  - {t: E, h: Alt}
+  - {t: I, h: Gui+ Alt}
+  - ''''
+  - {t: Magic 1, h: AltGr, s: '`␣'}
+  - {t: Z, h: Gui}
+  - B
+  - H
+  - D
+  - V
+  - .
+  - F
+  - /
+  - ;
+  - {t: J, h: Gui}
+  - {t: Magic 2, h: AltGr, s: '''␣'}
+  - {t: '-', h: symbol}
+  - {t: ␣, h: numeric, s: .␣Shift}
+  - {t: ⏎, h: navigation}
+  - {t: ⟳, h: system, s: Leader}
+  - {t: ⌫, h: function, s: ⌦}
+  - {t: Shift, h: symbol, s: Caps Word}
+  - ⬅️
+  - ⬇️
+  - ⬆️
+  - ➡️
+  - ''
+  - ''
+  querty:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: ▽, type: trans}
+  - {t: A, h: Gui+ Alt}
+  - {t: S, h: Alt}
+  - {t: D, h: Shift}
+  - {t: F, h: Ctrl}
+  - G
+  - H
+  - {t: J, h: Ctrl}
+  - {t: K, h: Shift}
+  - {t: L, h: Alt}
+  - {t: ;, h: Gui+ Alt}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Z, h: Gui}
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - {t: /, h: Gui}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  navigation:
+  - Undo
+  - Cut
+  - Copy
+  - Paste
+  - Redo
+  - ''
+  - Insert
+  - SLCK
+  - ''
+  - ''
+  - ''
+  - Gui+ Alt
+  - Alt
+  - Shift
+  - Ctrl
+  - ''
+  - APP
+  - ⬅️
+  - ⬇️
+  - ⬆️
+  - ➡️
+  - ''
+  - ''
+  - Gui
+  - MClick
+  - LClick
+  - RClick
+  - ''
+  - ''
+  - Home
+  - Page Down
+  - Page Up
+  - End
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  numeric:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ','
+  - '4'
+  - '5'
+  - '6'
+  - '-'
+  - ''
+  - Gui+ Alt
+  - Alt
+  - Shift
+  - Ctrl
+  - ''
+  - .
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - '*'
+  - ''
+  - Gui
+  - ''
+  - ''
+  - ''
+  - ''
+  - '='
+  - '7'
+  - '8'
+  - '9'
+  - +
+  - /
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  symbol:
+  - '?'
+  - '}'
+  - ']'
+  - )
+  - '&'
+  - {t: '"␣', s: '"⏎"'}
+  - _
+  - {t: <, s: <⏎>}
+  - '>'
+  - '#'
+  - ''
+  - {t: '%', h: Gui+ Alt}
+  - {t: '{', h: Alt, s: '{⏎}'}
+  - {t: '[', h: Shift, s: '[⏎]'}
+  - {t: (, h: Ctrl, s: (⏎)}
+  - '|'
+  - {t: '''␣', s: '''⏎'''}
+  - {t: '=', h: Ctrl}
+  - {t: +, h: Shift}
+  - {t: '-', h: Alt}
+  - {t: '!', h: Gui+ Alt}
+  - ''
+  - ''
+  - {t: ;, h: Gui}
+  - $
+  - '@'
+  - ':'
+  - '&nds TILDE'
+  - {t: '`␣', s: '`⏎`'}
+  - /
+  - '*'
+  - \
+  - {t: ^␣, h: Gui}
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  function:
+  - F12
+  - F7
+  - F8
+  - F9
+  - ''
+  - ''
+  - Print Scrn
+  - Pause Break
+  - ''
+  - ''
+  - ''
+  - F11
+  - F4
+  - F5
+  - F6
+  - Esc
+  - ''
+  - Ctrl
+  - Shift
+  - Alt
+  - Gui+ Alt
+  - ''
+  - ''
+  - F10
+  - F1
+  - F2
+  - F3
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Gui
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  media:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LClick
+  - RClick
+  - MClick
+  - ''
+  - ''
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - ''
+  - BRI UP
+  - MUTE
+  - Vol Down
+  - Vol Up
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BRI DN
+  - ⏯️
+  - ⏮️
+  - ⏭️
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  system:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT 5
+  - BT 4
+  - BT 3
+  - BT 2
+  - BT 1
+  - ''
+  - ''
+  - n!v on
+  - n!v off
+  - ''
+  - ''
+  - ''
+  - BT clear
+  - ''
+  - ''
+  - Out USB
+  - Out BLE
+  - ''
+  - ''
+  - {t: default, h: toggle}
+  - {t: querty, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - Boot
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+combos:
+- p: [4, 15]
+  k: ↹
+  l: [default, querty]
+- p: [3, 14]
+  k: {t: (, s: (⏎)}
+  l: [default, querty]
+- p: [2, 13]
+  k: {t: '[', s: '[⏎]'}
+  l: [default, querty]
+- p: [1, 12]
+  k: {t: '{', s: '{⏎}'}
+  l: [default, querty]
+- p: [15, 27]
+  k: SelWord
+  l: [default, querty]
+- p: [14, 26]
+  k: '#'
+  l: [default, querty]
+- p: [13, 25]
+  k: \
+  l: [default, querty]
+- p: [12, 24]
+  k: '*'
+  l: [default, querty]
+- p: [5, 16]
+  k: Esc
+  l: [default, querty]
+- p: [6, 17]
+  k: {t: <, s: <⏎>}
+  l: [default, querty]
+- p: [7, 18]
+  k: '@'
+  l: [default, querty]
+- p: [8, 19]
+  k: '%'
+  l: [default, querty]
+- p: [16, 28]
+  k: SelLine
+  l: [default, querty]
+- p: [17, 29]
+  k: '&'
+  l: [default, querty]
+- p: [18, 30]
+  k: '!'
+  l: [default, querty]
+- p: [19, 31]
+  k: $
+  l: [default, querty]

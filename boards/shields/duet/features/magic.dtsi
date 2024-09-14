@@ -1,0 +1,74 @@
+
+/ {
+
+    #define MAGIC_MACRO(NAME, BINDINGS) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            bindings = <&macro_tap BINDINGS>; \
+        };
+
+    MAGIC_MACRO(magic1_a, &kp T &kp I &kp O &kp N)
+    MAGIC_MACRO(magic1_b, &kp E &kp F &kp O &kp R &kp E)
+    MAGIC_MACRO(magic1_c, &kp I &kp A &kp O)
+    MAGIC_MACRO(magic1_d, &kp I &kp F &kp F)
+    MAGIC_MACRO(magic1_e, &kp N &kp T)
+    MAGIC_MACRO(magic1_i, &kp T &kp I &kp O &kp N)
+    MAGIC_MACRO(magic1_s, &kp S &kp I &kp O &kp N)
+    MAGIC_MACRO(magic1_t, &kp H &kp E &kp I &kp R)
+    MAGIC_MACRO(magic1_w, &kp H &kp I &kp C &kp H)
+    MAGIC_MACRO(magic1_comm, &kp SPACE &kp A &kp N &kp D &kp SPACE)
+    MAGIC_MACRO(magic1_hash, &kp D &kp E &kp F &kp I &kp N &kp E &kp SPACE)
+    MAGIC_MACRO(magic1_dot, &kp DOT &kp FSLH)
+    MAGIC_MACRO(magic1_space, &kp A &kp N &kp D &kp SPACE)
+
+    MAGIC_MACRO(magic2_a, &kp B &kp O &kp U &kp T)
+    MAGIC_MACRO(magic2_b, &kp E &kp C &kp A &kp U &kp S &kp E)
+    MAGIC_MACRO(magic2_c, &kp O &kp N &kp T)
+    MAGIC_MACRO(magic2_d, &kp I &kp R)
+    MAGIC_MACRO(magic2_e, &kp L &kp L &kp O)
+    MAGIC_MACRO(magic2_i, &kp N &kp T &kp E &kp R)
+    MAGIC_MACRO(magic2_s, &kp T &kp A &kp T &kp E)
+    MAGIC_MACRO(magic2_t, &kp H &kp E &kp R &kp E)
+    MAGIC_MACRO(magic2_w, &kp O &kp U &kp L &kp D)
+    MAGIC_MACRO(magic2_comm, &kp SPACE &kp B &kp U &kp T &kp SPACE)
+    MAGIC_MACRO(magic2_hash, &kp I &kp N &kp C &kp L &kp U &kp D &kp E &kp SPACE)
+    MAGIC_MACRO(magic2_dot, &kp DOT &kp DOT)
+    MAGIC_MACRO(magic2_space, &kp T &kp H &kp E &kp SPACE)
+
+    #define DEAD_ANTE 0x070100
+
+    labeled_dead_ante: labeled_key_repeat {
+        compatible = "zmk,behavior-macro";
+        label = "labeled_dead_ante";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        tap-ms = <0>;
+        bindings = <&macro_tap &kp DEAD_ANTE>;
+    };
+
+    magic1: magic1 {
+        compatible = "zmk,behavior-antecedent-morph";
+        #binding-cells = <0>;
+        max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+        defaults = <&labeled_dead_ante>;
+        antecedents = <
+                       A B C D E I S T W COMMA HASH DOT SPACE>;
+        bindings =    <
+                       &magic1_a &magic1_b &magic1_c &magic1_d &magic1_e &magic1_i &magic1_s &magic1_t &magic1_w &magic1_comm &magic1_hash &magic1_dot &magic1_space >;
+    };
+
+    magic2: magic2 {
+        compatible = "zmk,behavior-antecedent-morph";
+        #binding-cells = <0>;
+        max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+        defaults = <&labeled_dead_ante>;
+        antecedents = <
+                       A B C D E I S T W COMMA HASH DOT SPACE>;
+        bindings =    <
+                       &magic2_a &magic2_b &magic2_c &magic2_d &magic2_e &magic2_i &magic2_s &magic2_t &magic2_w &magic2_comm &magic2_hash &magic2_dot  &magic2_space >;
+    };
+
+};

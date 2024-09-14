@@ -1,0 +1,51 @@
+
+/ {
+
+    #define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <BINDING1>, <BINDING2>; \
+            mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+        };
+
+    #define KEEP_MORPH(NAME, MOD, BINDING1, BINDING2) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <BINDING1>, <BINDING2>; \
+            mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+            keep-mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+        };
+
+    #define DOUBLE_MORPH(NAME, NO_MOD, SHIFTED, CONTROLLED) \
+        SIMPLE_MORPH(NAME ## _sft, SFT, NO_MOD, SHIFTED) \
+        SIMPLE_MORPH(NAME, CTL, & ## NAME ## _sft, CONTROLLED)
+
+    #define SYMBOL_MORPH(NAME, OPENING_SYMBOL, CLOSING_SYMBOL) \
+        TAP_MACRO(mc_ ## NAME ## _pair, OPENING_SYMBOL CLOSING_SYMBOL &kp LEFT) \
+        TAP_MACRO(mc_ ## NAME ## _open, OPENING_SYMBOL &kp RET CLOSING_SYMBOL &kp UP &kp END &kp RET) \
+        SIMPLE_MORPH(morph_ ## NAME ## _sft, SFT, OPENING_SYMBOL, &mc_ ## NAME ## _pair) \
+        SIMPLE_MORPH(morph_ ## NAME, CTL, &morph_ ## NAME ## _sft, &mc_ ## NAME ## _open)
+
+    SIMPLE_MORPH(morph_enc_cw, SFT, &kp C_VOL_UP, &kp PG_UP)
+    SIMPLE_MORPH(morph_enc_ccw, SFT, &kp C_VOL_DN, &kp PG_DN)
+
+    SIMPLE_MORPH(morph_spc, SFT, &kp SPACE, &mc_dot_spc)
+    SIMPLE_MORPH(morph_bspc, SFT, &kp BSPC, &kp DEL)
+
+    SIMPLE_MORPH(morph_magic1, CTL, &magic1, &nds GRAVE)
+    SIMPLE_MORPH(morph_magic2, CTL, &magic2, &nds SQT)
+
+    DOUBLE_MORPH(morph_repeat, &key_repeat, &num_word, &leader)
+    DOUBLE_MORPH(morph_shift, &sk LSHFT, &kp CAPS, &caps_word)
+
+    SYMBOL_MORPH(lt, &kp LT, &kp GT)
+    SYMBOL_MORPH(lpar, &kp LPAR, &kp RPAR)
+    SYMBOL_MORPH(lbrc, &kp LBRC, &kp RBRC)
+    SYMBOL_MORPH(lbkt, &kp LBKT, &kp RBKT)
+    SYMBOL_MORPH(grave, &nds GRAVE, &nds GRAVE)
+    SYMBOL_MORPH(dqt, &nds DQT, &nds DQT)
+    SYMBOL_MORPH(sqt, &nds SQT, &nds SQT)
+
+};

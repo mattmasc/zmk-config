@@ -1,0 +1,184 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/dynamic-macros.h>
+
+#include "definitions/keycodes.h"
+#include "definitions/config.dtsi"
+#include "features/combos.dtsi"  // requires config.dtsi
+#include "features/mouse.dtsi"
+#include "features/leader.dtsi"  // requires config.dtsi
+#include "features/magic.dtsi"   // requires config.dtsi
+#include "features/macros.dtsi"
+#include "features/morph.dtsi"
+#include "features/holdtap.dtsi"
+
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <NUM FUNC>;
+            then-layer = <MEDIA>;
+        };
+    };
+
+    def_encoder: def_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&morph_enc_cw>, <&morph_enc_ccw>;
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+/*
+________|   X   |   P   |   L   |   M   |   K   |                                  |   ,   |   W   |   O   |   U   |   Q   |________
+|   `   |   S   |   N   |   R   |   T   |   G   |                                  |   Y   |   C   |   A   |   E   |   I   |   '   |
+|magic1 |   Z   |   B   |   H   |   D   |   V   |________                  ________|   .   |   F   |   /   |   ;   |   J   |magic2 |
+                                |   -   | SPACE |  RET  |                  | REPEAT| BSPC  | LSHFT |
+
+| LEFT  | DOWN  |  UP   | RIGHT |  XXX  |                                                          |VOL_UP |  XXX  |VOL_DN |
+*/
+            bindings = <
+                   &kp V            &kp D        &kp H            &kp F          &kp W          &kp X         &kp Q            &kp O         &kp U        &kp J
+&kp GRAVE          &hml LG(LALT) S  &hml LALT T  &hml LSHFT N     &hml LCTRL C   &kp G          &kp COMMA             &hmr LCTRL R     &hmr LSHFT A  &hmr LALT E  &hmr LG(LALT) I  &kp SQT
+&mt_magic1 RALT 0  &hml LGUI Z      &kp K        &kp M            &kp P          &kp B          &kp DOT           &kp L            &kp FSLH      &kp SEMI     &hmr LGUI Y      &mt_magic2 RALT 0
+                                             &lt SYM MINUS    &lt_spc NUM 0  &lt NAV RET    &lt_repeat SYS 0  &lt_bspc FUNC 0  &lt_shift SYM 0
+&kp LEFT   &kp DOWN     &kp UP       &kp RIGHT     XXX                                                           XXX
+            >;
+
+            sensor-bindings = <&def_encoder>;
+        };
+
+        querty_layer {
+/*
+________|   Q   |   W   |   E   |   R   |   T   |                                  |   Y   |   U   |   I   |   O   |   P   |________
+|  ___  |   A   |   S   |   D   |   F   |   G   |                                  |   H   |   J   |   K   |   L   |   ;   |  ___  |
+|  ___  |   Z   |   X   |   C   |   V   |   B   |________                  ________|   N   |   M   |   ,   |   .   |   /   |  ___  |
+                                |  ___  |  ___  |  ___  |                  |  ___  |  ___  |  ___  |
+
+|  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
+*/
+            bindings = <
+     &kp Q            &kp W        &kp E         &kp R         &kp T           &kp Y        &kp U          &kp I          &kp O        &kp P
+___  &hml LG(LALT) A  &hml LALT S  &hml LSHFT D  &hml LCTRL F  &kp G           &kp H        &hmr LCTRL J   &hmr LSHFT K   &hmr LALT L  &hmr LG(LALT) SEMI  ___
+___  &hml LGUI Z      &kp X        &kp C         &kp V         &kp B           &kp N        &kp M          &kp COMMA      &kp DOT      &hmr LGUI FSLH      ___
+                               ___           ___           ___             ___          ___            ___
+___   ___     ___      ___     ___                                                                    ___
+            >;
+        };
+
+        navigation_layer {
+/*
+________| Undo  |  Cut  | Copy  | Paste | Redo  |                                  |  XXX  |  INS  | SLCK  |  XXX  |  XXX  |________
+|  XXX  |GUI-ALT| LALT  | LSHFT | LCTRL | RCLK  |                                  | K_APP |  LEFT |  DOWN |  UP   | RIGHT |  XXX  |
+|  XXX  | LGUI  |  XXX  |  XXX  |  XXX  | MCLK  |________                  ________|  XXX  |  HOME | PG_DN | PG_UP |  END  |  XXX  |
+                                |  ___  |  ___  |  ___  |                  |  ___  |  ___  |  ___  |
+
+|  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
+*/
+            bindings = <
+     &mc_undo      &mc_cut    &mc_copy   &mc_paste  &mc_redo      XXX        &kp INS    &kp SLCK   XXX        XXX
+XXX  &kp LG(LALT)  &kp LALT   &kp LSHFT  &kp LCTRL  XXX           &kp K_APP  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  XXX
+XXX  &kp LGUI      &mkp MCLK  &mkp LCLK  &mkp RCLK  XXX           XXX        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    XXX
+                         ___        ___        ___         ___           ___       ___
+___  ___     ___      ___     ___                                                                    ___
+            >;
+
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+        };
+
+        numeric_layer {
+/*
+________|  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |                                  |   ,   |   4   |   5   |   6   |   -   |________
+|  XXX  |GUI-ALT| LALT  | LSHFT | LCTRL |  XXX  |                                  |   .   |   0   |   1   |   2   |   3   |   *   |
+|  XXX  | LGUI  |  XXX  |  XXX  |  XXX  |  XXX  |________                  ________|   =   |   7   |   8   |   9   |   +   |   /   |
+                                |  ___  |  ___  |  ___  |                  |  ___  |  ___  |  ___  |
+
+|  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
+*/
+            bindings = <
+     XXX           XXX       XXX        XXX        XXX          &kp COMMA  &kp N4  &kp N5  &kp N6  &kp MINUS
+XXX  &kp LG(LALT)  &kp LALT  &kp LSHFT  &kp LCTRL  XXX          &kp DOT    &kp N0  &kp N1  &kp N2  &kp N3     &kp STAR
+XXX  &kp LGUI      XXX       XXX        XXX        XXX          &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp PLUS   &kp FSLH
+                           ___     ___     ___            ___   ___        ___
+___        ___       ___     ___     ___                                                   ___
+            >;
+        };
+
+        symbol_layer {
+/*
+________|   ?   |   }   |   ]   |   )   |   &   |                                  |   "   |   _   |   <   |   >   |   #   |________
+|  XXX  |   %   |   {   |   [   |   (   |   |   |                                  |   '   |   =   |   +   |   -   |   !   |  XXX  |
+|  XXX  |   ;   |   $   |   @   |   :   |   ~   |________                  ________|   `   |   /   |   *   |   \   |   ^   |  XXX  |
+                                |  ___  |  ___  |  ___  |                  |  ___  |  ___  |  ___  |
+
+|  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
+*/
+            bindings = <
+      &kp QMARK            &kp RBRC          &kp RBKT           &kp RPAR           &kp AMPS         &morph_dqt    &kp UNDER         &morph_lt        &kp GT           &kp HASH
+XXX   &hml LG(LALT) PRCNT  &lbrc_hml LALT 0  &lbkt_hml LSHFT 0  &lpar_hml LCTRL 0  &kp PIPE         &morph_sqt    &hmr LCTRL EQUAL  &hmr LSHFT PLUS  &hmr LALT MINUS  &hmr LG(LALT) EXCL  XXX
+XXX   &hml LGUI SEMI       &kp DLLR          &kp AT             &kp COLON          &nds TILDE       &morph_grave  &kp FSLH          &kp STAR         &kp BSLH         &hmrd LGUI CARET    XXX
+                                         ___              ___               ___             ___        ___               ___
+___        ___       ___     ___     ___                                                   ___
+            >;
+        };
+
+        function_layer {
+/*
+________|  F12  |  F7  |  F8  |  F9  |  XXX  |                                  |  XXX  | PSCRN |PS_BRK |  XXX  |  XXX  |________
+|  XXX  |  F11  |  F4  |  F5  |  F6  |  ESC  |                                  |  XXX  | LCTRL | LSHFT | LALT  |GUI-ALT|  XXX  |
+|  XXX  |  F10  |  F1  |  F2  |  F3  |  XXX  |________                  ________|  XXX  |  XXX  |  XXX  |  XXX  | LGUI  |  XXX  |
+                                |  ___  |  ___  |  ___  |                  |  ___  |  ___  |  ___  |
+
+|  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
+*/
+            bindings = <
+     &kp F12  &kp F7  &kp F8  &kp F9  XXX            XXX  &kp PSCRN  &kp PAUSE_BREAK  XXX       XXX
+XXX  &kp F11  &kp F4  &kp F5  &kp F6  &kp ESC        XXX  &kp LCTRL  &kp LSHFT        &kp LALT  &kp LG(LALT)  XXX
+XXX  &kp F10  &kp F1  &kp F2  &kp F3  XXX            XXX  XXX        XXX              XXX       &kp LGUI      XXX
+                      ___     ___     ___        ___   ___       ___
+___        ___       ___     ___     ___                                                   ___
+            >;
+        };
+
+        media_layer {
+/*
+________|  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |                                  |  XXX  | LCLK  | RCLK  | MCLK  |  XXX  |________
+|  XXX  | MS_L  | MS_U  | MS_D  | MS_R  |  XXX  |                                  |BRI_UP | MUTE  | VOL_DN| VOL_UP|  XXX  |  XXX  |
+|  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |________                  ________|BRI_DN | PLAY  |  PREV |  NEXT |  XXX  |  XXX  |
+                                |  ___  |  ___  |  ___  |                  |  ___  |  ___  |  ___  |
+
+|  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
+*/
+            bindings = <
+     XXX     XXX     XXX     XXX     XXX       XXX           &mkp LCLK   &mkp RCLK     &mkp MCLK     XXX
+XXX  U_MS_L  U_MS_U  U_MS_D  U_MS_R  XXX       &kp C_BRI_UP  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  XXX  XXX
+XXX  XXX     XXX     XXX     XXX     XXX       &kp C_BRI_DN  &kp C_PP    &kp C_PREV    &kp C_NEXT    XXX  XXX
+                           ___     ___     ___            ___   ___        ___
+___        ___       ___     ___     ___                                                   ___
+            >;
+        };
+
+        system_layer {
+/*
+________|  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |                                  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |________
+| BT 4  | BT 3  | BT 2  | BT 1  | BT 0  |  XXX  |                                  |  XXX  | EP_ON |EP_OFF |  XXX  |  XXX  |  XXX  |
+|BT CLR |  XXX  |  XXX  |  USB  |  BLE  |  XXX  |________                  ________|  XXX  |  DEF  |QWERTY |  XXX  |  XXX  |  XXX  |
+                                |  ___  |  ___  |  ___  |                  |  ___  | BOOT  |  ___  |
+
+|  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
+*/
+            bindings = <
+              XXX           XXX           XXX           XXX           XXX                XXX  XXX                XXX                XXX  XXX
+&bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  XXX                XXX  &ext_power EP_ON   &ext_power EP_OFF  XXX  XXX  XXX
+&bt BT_CLR    XXX           XXX           &out OUT_USB  &out OUT_BLE  XXX                XXX  &to DEF            &to QWERTY         XXX  XXX  XXX
+                                          XXX           XXX           XXX                XXX  &bootloader        XXX
+XXX  XXX  XXX  XXX   XXX                                                                                               XXX
+            >;
+        };
+    };
+};
