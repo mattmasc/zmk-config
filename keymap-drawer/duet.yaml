@@ -1,38 +1,38 @@
 layers:
   default:
-  - X
-  - P
-  - L
-  - M
-  - K
-  - ','
+  - V
+  - D
+  - H
+  - F
   - W
+  - X
+  - Q
   - O
   - U
-  - Q
+  - J
   - '`'
   - {t: S, h: Gui+ Alt}
-  - {t: N, h: Alt}
-  - {t: R, h: Shift}
-  - {t: T, h: Ctrl}
-  - G
-  - Y
+  - {t: T, h: Alt}
+  - {t: N, h: Shift}
   - {t: C, h: Ctrl}
+  - G
+  - ','
+  - {t: R, h: Ctrl}
   - {t: A, h: Shift}
   - {t: E, h: Alt}
   - {t: I, h: Gui+ Alt}
   - ''''
   - {t: Magic 1, h: AltGr, s: '`␣'}
   - {t: Z, h: Gui}
+  - K
+  - M
+  - P
   - B
-  - H
-  - D
-  - V
   - .
-  - F
+  - L
   - /
   - ;
-  - {t: J, h: Gui}
+  - {t: Y, h: Gui}
   - {t: Magic 2, h: AltGr, s: '''␣'}
   - {t: '-', h: symbol}
   - {t: ␣, h: numeric, s: .␣Shift}
