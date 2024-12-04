@@ -35,17 +35,17 @@
 
         default_layer {
 /*
-________|   X   |   P   |   L   |   M   |   K   |                                  |   ,   |   W   |   O   |   U   |   Q   |________
-|   `   |   S   |   N   |   R   |   T   |   G   |                                  |   Y   |   C   |   A   |   E   |   I   |   '   |
-|magic1 |   Z   |   B   |   H   |   D   |   V   |________                  ________|   .   |   F   |   /   |   ;   |   J   |magic2 |
+________|   V   |   D   |   H   |   F   |   W   |                                  |   X   |   Q   |   O   |   U   |   J   |________
+|   `   |   S   |   T   |   N   |   C   |   G   |                                  |   .   |   R   |   A   |   E   |   I   |   '   |
+|magic1 |   Z   |   K   |   M   |   P   |   B   |________                  ________|   ,   |   L   |   /   |   ;   |   Y   |magic2 |
                                 |   -   | SPACE |  RET  |                  | REPEAT| BSPC  | LSHFT |
 
 | LEFT  | DOWN  |  UP   | RIGHT |  XXX  |                                                          |VOL_UP |  XXX  |VOL_DN |
 */
             bindings = <
                    &kp V            &kp D        &kp H            &kp F          &kp W          &kp X         &kp Q            &kp O         &kp U        &kp J
-&kp GRAVE          &hml LG(LALT) S  &hml LALT T  &hml LSHFT N     &hml LCTRL C   &kp G          &kp COMMA             &hmr LCTRL R     &hmr LSHFT A  &hmr LALT E  &hmr LG(LALT) I  &kp SQT
-&mt_magic1 RALT 0  &hml LGUI Z      &kp K        &kp M            &kp P          &kp B          &kp DOT           &kp L            &kp FSLH      &kp SEMI     &hmr LGUI Y      &mt_magic2 RALT 0
+&kp GRAVE          &hml LG(LALT) S  &hml LALT T  &hml LSHFT N     &hml LCTRL C   &kp G          &kp DOT       &hmr LCTRL R     &hmr LSHFT A  &hmr LALT E  &hmr LG(LALT) I  &kp SQT
+&mt_magic1 RALT 0  &hml LGUI Z      &kp K        &kp M            &kp P          &kp B          &kp COMMA     &kp L            &kp FSLH      &kp SEMI     &hmr LGUI Y      &mt_magic2 RALT 0
                                              &lt SYM MINUS    &lt_spc NUM 0  &lt NAV RET    &lt_repeat SYS 0  &lt_bspc FUNC 0  &lt_shift SYM 0
 &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT     XXX                                                           XXX
             >;
@@ -93,17 +93,17 @@ ___  ___     ___      ___     ___                                               
 
         numeric_layer {
 /*
-________|  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |                                  |   ,   |   4   |   5   |   6   |   -   |________
+________|  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |                                  |   =   |   4   |   5   |   6   |   -   |________
 |  XXX  |GUI-ALT| LALT  | LSHFT | LCTRL |  XXX  |                                  |   .   |   0   |   1   |   2   |   3   |   *   |
-|  XXX  | LGUI  |  XXX  |  XXX  |  XXX  |  XXX  |________                  ________|   =   |   7   |   8   |   9   |   +   |   /   |
+|  XXX  | LGUI  |  XXX  |  XXX  |  XXX  |  XXX  |________                  ________|   ,   |   7   |   8   |   9   |   +   |   /   |
                                 |  ___  |  ___  |  ___  |                  |  ___  |  ___  |  ___  |
 
 |  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
 */
             bindings = <
-     XXX           XXX       XXX        XXX        XXX          &kp COMMA  &kp N4  &kp N5  &kp N6  &kp MINUS
+     XXX           XXX       XXX        XXX        XXX          &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp MINUS
 XXX  &kp LG(LALT)  &kp LALT  &kp LSHFT  &kp LCTRL  XXX          &kp DOT    &kp N0  &kp N1  &kp N2  &kp N3     &kp STAR
-XXX  &kp LGUI      XXX       XXX        XXX        XXX          &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp PLUS   &kp FSLH
+XXX  &kp LGUI      XXX       XXX        XXX        XXX          &kp COMMA  &kp N7  &kp N8  &kp N9  &kp PLUS   &kp FSLH
                            ___     ___     ___            ___   ___        ___
 ___        ___       ___     ___     ___                                                   ___
             >;
