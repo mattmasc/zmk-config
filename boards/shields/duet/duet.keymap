@@ -73,17 +73,17 @@ ___   ___     ___      ___     ___                                              
 
         navigation_layer {
 /*
-________| Undo  |  Cut  | Copy  | Paste | Redo  |                                  |  XXX  |  INS  | SLCK  |  XXX  |  XXX  |________
+________| Undo  |  Cut  | Copy  | Paste | Redo  |                                  |  INS  |   H   |   J   |   K   |   L   |________
 |  XXX  |GUI-ALT| LALT  | LSHFT | LCTRL | RCLK  |                                  | K_APP |  LEFT |  DOWN |  UP   | RIGHT |  XXX  |
-|  XXX  | LGUI  |  XXX  |  XXX  |  XXX  | MCLK  |________                  ________|  XXX  |  HOME | PG_DN | PG_UP |  END  |  XXX  |
+|  XXX  | LGUI  |  XXX  |  XXX  |  XXX  | MCLK  |________                  ________|  SLCK |  HOME | PG_DN | PG_UP |  END  |  XXX  |
                                 |  ___  |  ___  |  ___  |                  |  ___  |  ___  |  ___  |
 
 |  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
 */
             bindings = <
-     &mc_undo      &mc_cut    &mc_copy   &mc_paste  &mc_redo              XXX        &kp INS    &kp SLCK   XXX        XXX
-XXX  &kp LG(LALT)  &kp LALT   &kp LSHFT  &kp LCTRL  XXX                   &kp K_APP  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  XXX
-XXX  &kp LGUI      &mkp MCLK  &mkp LCLK  &mkp RCLK  XXX                   XXX        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    XXX
+     &mc_undo      &mc_cut    &mc_copy   &mc_paste  &mc_redo            &kp INS    &kp H     &kp J      &kp K      &kp L
+XXX  &kp LG(LALT)  &kp LALT   &kp LSHFT  &kp LCTRL  XXX                 &kp K_APP  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  XXX
+XXX  &kp LGUI      &mkp MCLK  &mkp LCLK  &mkp RCLK  XXX                 &kp SLCK   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    XXX
                                   ___        ___        ___             ___           ___       ___
 ___  ___     ___      ___     ___                                                                    ___
             >;
