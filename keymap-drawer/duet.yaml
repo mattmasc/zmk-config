@@ -110,7 +110,7 @@ layers:
   - Alt
   - Shift
   - Ctrl
-  - ''
+  - ␣
   - APP
   - ⬅️
   - ⬇️
@@ -144,7 +144,7 @@ layers:
   numeric:
   - ''
   - ''
-  - {t: ␣, s: .␣Shift}
+  - ␣
   - ⏎
   - Esc
   - '='
@@ -242,9 +242,9 @@ layers:
   - F9
   - Pause Break
   - Esc
-  - {t: ⟳, s: Leader}
-  - {t: ⌫, s: ⌦}
-  - {t: Shift, h: sticky, s: Caps Word}
+  - ⟳
+  - ⌫
+  - ⌦
   - ''
   - ''
   - F11
