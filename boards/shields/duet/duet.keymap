@@ -74,15 +74,15 @@ ___   ___     ___      ___     ___                                              
         navigation_layer {
 /*
 ________| Undo  |  Cut  | Copy  | Paste | Redo  |                                  |  INS  |   H   |   J   |   K   |   L   |________
-|  XXX  |GUI-ALT| LALT  | LSHFT | LCTRL | RCLK  |                                  | K_APP |  LEFT |  DOWN |  UP   | RIGHT |  XXX  |
-|  XXX  | LGUI  |  XXX  |  XXX  |  XXX  | MCLK  |________                  ________|  SLCK |  HOME | PG_DN | PG_UP |  END  |  XXX  |
+|  XXX  |GUI-ALT| LALT  | LSHFT | LCTRL | SPACE |                                  | K_APP |  LEFT |  DOWN |  UP   | RIGHT |  XXX  |
+|  XXX  | LGUI  |  XXX  |  XXX  |  XXX  |  XXX  |________                  ________|  SLCK |  HOME | PG_DN | PG_UP |  END  |  XXX  |
                                 |  ___  |  ___  |  ___  |                  |  ___  |  ___  |  ___  |
 
 |  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
 */
             bindings = <
      &mc_undo      &mc_cut    &mc_copy   &mc_paste  &mc_redo            &kp INS    &kp H     &kp J      &kp K      &kp L
-XXX  &kp LG(LALT)  &kp LALT   &kp LSHFT  &kp LCTRL  XXX                 &kp K_APP  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  XXX
+XXX  &kp LG(LALT)  &kp LALT   &kp LSHFT  &kp LCTRL  &kp SPACE           &kp K_APP  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  XXX
 XXX  &kp LGUI      &mkp MCLK  &mkp LCLK  &mkp RCLK  XXX                 &kp SLCK   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    XXX
                                   ___        ___        ___             ___           ___       ___
 ___  ___     ___      ___     ___                                                                    ___
@@ -101,7 +101,7 @@ ________|  XXX  |  XXX  | SPACE |  RET  |  ESC  |                               
 |  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
 */
             bindings = <
-     XXX           XXX       &morph_spc &kp RET    &kp ESC                       &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp MINUS
+     XXX           XXX       &kp SPACE  &kp RET    &kp ESC                   &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp MINUS
 XXX  &kp LG(LALT)  &kp LALT  &kp LSHFT  &kp LCTRL  &kp TAB                   &kp DOT    &kp N0  &kp N1  &kp N2  &kp N3     &kp STAR
 XXX  &kp LGUI      XXX       XXX        XXX        XXX                       &kp COMMA  &kp N7  &kp N8  &kp N9  &kp PLUS   &kp FSLH
                                           ___     ___     ___            ___   ___        ___
@@ -129,7 +129,7 @@ ___        ___       ___     ___     ___                                        
 
         function_layer {
 /*
-________|  F12  |  F7  |  F8  |  F9  | PS_BRK|                                  |  ESC  | REPEAT| BSPC  | LSHFT |  XXX  |________
+________|  F12  |  F7  |  F8  |  F9  | PS_BRK|                                  |  ESC  | REPEAT| BSPC  |  DEL  |  XXX  |________
 |  XXX  |  F11  |  F4  |  F5  |  F6  | PSCRN |                                  |  TAB  | LCTRL | LSHFT | LALT  |GUI-ALT|  XXX  |
 |  XXX  |  F10  |  F1  |  F2  |  F3  |  XXX  |________                  ________|  XXX  |  XXX  |  XXX  |  XXX  | LGUI  |  XXX  |
                                 |  ___  |  ___  |  ___  |                  |  ___  |  ___  |  ___  |
@@ -137,8 +137,8 @@ ________|  F12  |  F7  |  F8  |  F9  | PS_BRK|                                  
 |  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
 */
             bindings = <
-     &kp F12  &kp F7  &kp F8  &kp F9  &kp PAUSE_BREAK                 &kp ESC  &morph_repeat  &morph_bspc  &morph_shift  XXX
-XXX  &kp F11  &kp F4  &kp F5  &kp F6  &kp PSCRN                       &kp TAB  &kp LCTRL      &kp LSHFT    &kp LALT      &kp LG(LALT)  XXX
+     &kp F12  &kp F7  &kp F8  &kp F9  &kp PAUSE_BREAK                 &kp ESC  &key_repeat  &kp BSPC    &kp DEL    XXX
+XXX  &kp F11  &kp F4  &kp F5  &kp F6  &kp PSCRN                       &kp TAB  &kp LCTRL    &kp LSHFT   &kp LALT   &kp LG(LALT)  XXX
 XXX  &kp F10  &kp F1  &kp F2  &kp F3  XXX                             XXX        XXX            XXX          XXX           &kp LGUI      XXX
                                       ___     ___     ___        ___   ___       ___
 ___        ___       ___     ___     ___                                                   ___
