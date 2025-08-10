@@ -74,16 +74,16 @@ ___   ___     ___      ___     ___                                              
         navigation_layer {
 /*
 ________| Undo  |  Cut  | Copy  | Paste | Redo  |                                  |  INS  |   H   |   J   |   K   |   L   |________
-|  XXX  |GUI-ALT| LALT  | LSHFT | LCTRL | SPACE |                                  | K_APP |  LEFT |  DOWN |  UP   | RIGHT |  XXX  |
-|  XXX  | LGUI  |  XXX  |  XXX  |  XXX  |  XXX  |________                  ________|  SLCK |  HOME | PG_DN | PG_UP |  END  |  XXX  |
+|  XXX  |GUI-ALT| LALT  | LSHFT | LCTRL |  MB4  |                                  | K_APP |  LEFT |  DOWN |  UP   | RIGHT |  XXX  |
+|  XXX  | LGUI  |  MCLK |  LCLK |  RCLK |  MB5  |________                  ________|  SLCK |  HOME | PG_DN | PG_UP |  END  |  XXX  |
                                 |  ___  |  ___  |  ___  |                  |  ___  |  ___  |  ___  |
 
 |  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
 */
             bindings = <
      &mc_undo      &mc_cut    &mc_copy   &mc_paste  &mc_redo            &kp INS    &kp H     &kp J      &kp K      &kp L
-XXX  &kp LG(LALT)  &kp LALT   &kp LSHFT  &kp LCTRL  &kp SPACE           &kp K_APP  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  XXX
-XXX  &kp LGUI      &mkp MCLK  &mkp LCLK  &mkp RCLK  XXX                 &kp SLCK   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    XXX
+XXX  &kp LG(LALT)  &kp LALT   &kp LSHFT  &kp LCTRL  &mkp MB4            &kp K_APP  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  XXX
+XXX  &kp LGUI      &mkp MCLK  &mkp LCLK  &mkp RCLK  &mkp MB5                 &kp SLCK   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    XXX
                                   ___        ___        ___             ___           ___       ___
 ___  ___     ___      ___     ___                                                                    ___
             >;
