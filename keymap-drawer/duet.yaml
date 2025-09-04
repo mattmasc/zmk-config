@@ -23,7 +23,7 @@ layers:
   - {t: E, h: Alt}
   - {t: I, h: Gui+Alt}
   - ''''
-  - {t: Magic 1, h: AltGr, s: '`␣'}
+  - {t: 🪄 L, h: AltGr, s: '`␣'}
   - {t: Z, h: Gui}
   - K
   - M
@@ -34,9 +34,9 @@ layers:
   - /
   - ;
   - {t: Y, h: Gui}
-  - {t: Magic 2, h: AltGr, s: '''␣'}
+  - {t: 🪄 R, h: AltGr, s: '''␣'}
   - {t: '-', h: symbol}
-  - {t: ␣, h: numeric, s: .␣Shift}
+  - {t: ␣, h: numeric, s: .␣↑}
   - {t: ⏎, h: navigation}
   - {t: ⟳, h: system, s: Leader}
   - {t: ⌫, h: function, s: ⌦}
@@ -354,9 +354,9 @@ layers:
   - ''
   - BT clear
   - ''
-  - ''
   - Out USB
   - Out BLE
+  - Out TOG
   - ''
   - ''
   - {t: default, h: toggle}
