@@ -10,70 +10,70 @@
             bindings = <&macro_tap BINDINGS>; \
         };
 
-    MAGIC_MACRO(magic1_a, &kp T &kp I &kp O &kp N )
-    MAGIC_MACRO(magic1_b, &kp J &kp E &kp C &kp T )
-    MAGIC_MACRO(magic1_c, &kp A &kp U &kp S &kp E )
-    MAGIC_MACRO(magic1_d, &kp I &kp T &kp I &kp O &kp N)
-    MAGIC_MACRO(magic1_e, &kp M &kp E &kp N &kp T )
-    MAGIC_MACRO(magic1_f, &kp E &kp R &kp E &kp N )
-    MAGIC_MACRO(magic1_g, &kp E &kp N &kp E &kp R )
-    MAGIC_MACRO(magic1_h, &kp O &kp U &kp L &kp D )
-    MAGIC_MACRO(magic1_i, &kp O &kp N &kp A &kp L )
-    MAGIC_MACRO(magic1_j, &kp E &kp C &kp T &kp I )
-    MAGIC_MACRO(magic1_k, &kp N &kp O &kp W &kp L )
-    MAGIC_MACRO(magic1_l, &kp A &kp T &kp I &kp O &kp N)
-    MAGIC_MACRO(magic1_m, &kp E &kp M &kp B &kp E &kp R)
-    MAGIC_MACRO(magic1_n, &kp M &kp E &kp N &kp T )
-    MAGIC_MACRO(magic1_o, &kp T &kp H &kp E &kp R )
-    MAGIC_MACRO(magic1_p, &kp O &kp I &kp N &kp T )
-    MAGIC_MACRO(magic1_q, &kp U &kp E &kp S &kp T )
-    MAGIC_MACRO(magic1_r, &kp I &kp G &kp H &kp T )
-    MAGIC_MACRO(magic1_s, &kp S &kp I &kp O &kp N )
-    MAGIC_MACRO(magic1_t, &kp I &kp O &kp N &kp S )
-    MAGIC_MACRO(magic1_u, &kp N &kp D &kp E &kp R )
-    MAGIC_MACRO(magic1_v, &kp I &kp S &kp I &kp O &kp N)
-    MAGIC_MACRO(magic1_w, &kp O &kp R &kp L &kp D )
-    MAGIC_MACRO(magic1_x, &kp P &kp E &kp R &kp I )
-    MAGIC_MACRO(magic1_y, &kp S &kp T &kp E &kp M )
-    MAGIC_MACRO(magic1_z, &kp Z &kp L &kp E &kp D )
+    MAGIC_MACRO(magicL_a, &kp T &kp I &kp O &kp N )
+    MAGIC_MACRO(magicL_b, &kp J &kp E &kp C &kp T )
+    MAGIC_MACRO(magicL_c, &kp A &kp U &kp S &kp E )
+    MAGIC_MACRO(magicL_d, &kp I &kp T &kp I &kp O &kp N)
+    MAGIC_MACRO(magicL_e, &kp M &kp E &kp N &kp T )
+    MAGIC_MACRO(magicL_f, &kp E &kp R &kp E &kp N )
+    MAGIC_MACRO(magicL_g, &kp E &kp N &kp E &kp R )
+    MAGIC_MACRO(magicL_h, &kp O &kp U &kp L &kp D )
+    MAGIC_MACRO(magicL_i, &kp O &kp N &kp A &kp L )
+    MAGIC_MACRO(magicL_j, &kp E &kp C &kp T &kp I )
+    MAGIC_MACRO(magicL_k, &kp N &kp O &kp W &kp L )
+    MAGIC_MACRO(magicL_l, &kp A &kp T &kp I &kp O &kp N)
+    MAGIC_MACRO(magicL_m, &kp E &kp M &kp B &kp E &kp R)
+    MAGIC_MACRO(magicL_n, &kp M &kp E &kp N &kp T )
+    MAGIC_MACRO(magicL_o, &kp T &kp H &kp E &kp R )
+    MAGIC_MACRO(magicL_p, &kp O &kp I &kp N &kp T )
+    MAGIC_MACRO(magicL_q, &kp U &kp E &kp S &kp T )
+    MAGIC_MACRO(magicL_r, &kp I &kp G &kp H &kp T )
+    MAGIC_MACRO(magicL_s, &kp S &kp I &kp O &kp N )
+    MAGIC_MACRO(magicL_t, &kp I &kp O &kp N &kp S )
+    MAGIC_MACRO(magicL_u, &kp N &kp D &kp E &kp R )
+    MAGIC_MACRO(magicL_v, &kp I &kp S &kp I &kp O &kp N)
+    MAGIC_MACRO(magicL_w, &kp O &kp R &kp L &kp D )
+    MAGIC_MACRO(magicL_x, &kp P &kp E &kp R &kp I )
+    MAGIC_MACRO(magicL_y, &kp S &kp T &kp E &kp M )
+    MAGIC_MACRO(magicL_z, &kp Z &kp L &kp E &kp D )
 
-    MAGIC_MACRO(magic1_space, &kp A &kp N &kp D &kp SPACE)
-    MAGIC_MACRO(magic1_dot, &kp DOT &kp FSLH)
-    MAGIC_MACRO(magic1_comm, &kp SPACE &kp A &kp N &kp D &kp SPACE)
-    MAGIC_MACRO(magic1_hash, &kp D &kp E &kp F &kp I &kp N &kp E &kp SPACE)
+    MAGIC_MACRO(magicL_space, &kp A &kp N &kp D &kp SPACE)
+    MAGIC_MACRO(magicL_dot, &kp DOT &kp FSLH)
+    MAGIC_MACRO(magicL_comm, &kp SPACE &kp A &kp N &kp D &kp SPACE)
+    MAGIC_MACRO(magicL_hash, &kp D &kp E &kp F &kp I &kp N &kp E &kp SPACE)
 
 
-    MAGIC_MACRO(magic2_a, &kp B &kp O &kp U &kp T )
-    MAGIC_MACRO(magic2_b, &kp I &kp L &kp I &kp T )
-    MAGIC_MACRO(magic2_c, &kp T &kp I &kp O &kp N )
-    MAGIC_MACRO(magic2_d, &kp I &kp F &kp F &kp E &kp R)
-    MAGIC_MACRO(magic2_e, &kp O &kp P &kp L &kp E )
-    MAGIC_MACRO(magic2_f, &kp I &kp R &kp S &kp T )
-    MAGIC_MACRO(magic2_g, &kp O &kp V &kp E &kp R &kp N)
-    MAGIC_MACRO(magic2_h, &kp O &kp U &kp G &kp H )
-    MAGIC_MACRO(magic2_i, &kp T &kp I &kp O &kp N )
-    MAGIC_MACRO(magic2_j, &kp E &kp C &kp T &kp S )
-    MAGIC_MACRO(magic2_k, &kp N &kp O &kp W &kp N )
-    MAGIC_MACRO(magic2_l, &kp I &kp G &kp H &kp T )
-    MAGIC_MACRO(magic2_m, &kp E &kp N &kp T &kp S )
-    MAGIC_MACRO(magic2_n, &kp A &kp T &kp I &kp O &kp N)
-    MAGIC_MACRO(magic2_o, &kp U &kp G &kp H &kp T )
-    MAGIC_MACRO(magic2_p, &kp E &kp O &kp P &kp L &kp E)
-    MAGIC_MACRO(magic2_q, &kp U &kp I &kp R &kp E )
-    MAGIC_MACRO(magic2_r, &kp O &kp U &kp G &kp H )
-    MAGIC_MACRO(magic2_s, &kp H &kp O &kp U &kp L &kp D)
-    MAGIC_MACRO(magic2_t, &kp H &kp E &kp R &kp E )
-    MAGIC_MACRO(magic2_u, &kp T &kp I &kp O &kp N )
-    MAGIC_MACRO(magic2_v, &kp E &kp L &kp O &kp P )
-    MAGIC_MACRO(magic2_w, &kp H &kp E &kp R &kp E )
-    MAGIC_MACRO(magic2_x, &kp P &kp E &kp C &kp T )
-    MAGIC_MACRO(magic2_y, &kp O &kp U &kp N &kp G )
-    MAGIC_MACRO(magic2_z, &kp A &kp T &kp I &kp O &kp N)
+    MAGIC_MACRO(magicR_a, &kp B &kp O &kp U &kp T )
+    MAGIC_MACRO(magicR_b, &kp I &kp L &kp I &kp T )
+    MAGIC_MACRO(magicR_c, &kp T &kp I &kp O &kp N )
+    MAGIC_MACRO(magicR_d, &kp I &kp F &kp F &kp E &kp R)
+    MAGIC_MACRO(magicR_e, &kp O &kp P &kp L &kp E )
+    MAGIC_MACRO(magicR_f, &kp I &kp R &kp S &kp T )
+    MAGIC_MACRO(magicR_g, &kp O &kp V &kp E &kp R &kp N)
+    MAGIC_MACRO(magicR_h, &kp O &kp U &kp G &kp H )
+    MAGIC_MACRO(magicR_i, &kp T &kp I &kp O &kp N )
+    MAGIC_MACRO(magicR_j, &kp E &kp C &kp T &kp S )
+    MAGIC_MACRO(magicR_k, &kp N &kp O &kp W &kp N )
+    MAGIC_MACRO(magicR_l, &kp I &kp G &kp H &kp T )
+    MAGIC_MACRO(magicR_m, &kp E &kp N &kp T &kp S )
+    MAGIC_MACRO(magicR_n, &kp A &kp T &kp I &kp O &kp N)
+    MAGIC_MACRO(magicR_o, &kp U &kp G &kp H &kp T )
+    MAGIC_MACRO(magicR_p, &kp E &kp O &kp P &kp L &kp E)
+    MAGIC_MACRO(magicR_q, &kp U &kp I &kp R &kp E )
+    MAGIC_MACRO(magicR_r, &kp O &kp U &kp G &kp H )
+    MAGIC_MACRO(magicR_s, &kp H &kp O &kp U &kp L &kp D)
+    MAGIC_MACRO(magicR_t, &kp H &kp E &kp R &kp E )
+    MAGIC_MACRO(magicR_u, &kp T &kp I &kp O &kp N )
+    MAGIC_MACRO(magicR_v, &kp E &kp L &kp O &kp P )
+    MAGIC_MACRO(magicR_w, &kp H &kp E &kp R &kp E )
+    MAGIC_MACRO(magicR_x, &kp P &kp E &kp C &kp T )
+    MAGIC_MACRO(magicR_y, &kp O &kp U &kp N &kp G )
+    MAGIC_MACRO(magicR_z, &kp A &kp T &kp I &kp O &kp N)
 
-    MAGIC_MACRO(magic2_space, &kp T &kp H &kp E &kp SPACE)
-    MAGIC_MACRO(magic2_dot, &kp DOT &kp DOT)
-    MAGIC_MACRO(magic2_comm, &kp SPACE &kp B &kp U &kp T &kp SPACE)
-    MAGIC_MACRO(magic2_hash, &kp I &kp N &kp C &kp L &kp U &kp D &kp E &kp SPACE)
+    MAGIC_MACRO(magicR_space, &kp T &kp H &kp E &kp SPACE)
+    MAGIC_MACRO(magicR_dot, &kp DOT &kp DOT)
+    MAGIC_MACRO(magicR_comm, &kp SPACE &kp B &kp U &kp T &kp SPACE)
+    MAGIC_MACRO(magicR_hash, &kp I &kp N &kp C &kp L &kp U &kp D &kp E &kp SPACE)
 
     #define DEAD_ANTE 0x070100
 
@@ -86,7 +86,7 @@
         bindings = <&macro_tap &kp DEAD_ANTE>;
     };
 
-    magic1: magic1 {
+    magicL: magicL {
         compatible = "zmk,behavior-antecedent-morph";
         #binding-cells = <0>;
         max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
@@ -94,11 +94,11 @@
         antecedents = <
                        A B C D E F G H I J K L M N O P Q R S T U V W X Y Z SPACE DOT COMMA HASH >;
         bindings =    <
-                       &magic1_a &magic1_b &magic1_c &magic1_d &magic1_e &magic1_f &magic1_g &magic1_h &magic1_i &magic1_j &magic1_k &magic1_l &magic1_m &magic1_n &magic1_o
-                       &magic1_p &magic1_q &magic1_r &magic1_s &magic1_t &magic1_u &magic1_v &magic1_w &magic1_x &magic1_y &magic1_z &magic1_space &magic1_dot &magic1_comm &magic1_hash >;
+                       &magicL_a &magicL_b &magicL_c &magicL_d &magicL_e &magicL_f &magicL_g &magicL_h &magicL_i &magicL_j &magicL_k &magicL_l &magicL_m &magicL_n &magicL_o
+                       &magicL_p &magicL_q &magicL_r &magicL_s &magicL_t &magicL_u &magicL_v &magicL_w &magicL_x &magicL_y &magicL_z &magicL_space &magicL_dot &magicL_comm &magicL_hash >;
     };
 
-    magic2: magic2 {
+    magicR: magicR {
         compatible = "zmk,behavior-antecedent-morph";
         #binding-cells = <0>;
         max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
@@ -106,8 +106,8 @@
         antecedents = <
                        A B C D E F G H I J K L M N O P Q R S T U V W X Y Z SPACE DOT COMMA HASH >;
         bindings =    <
-                       &magic2_a &magic2_b &magic2_c &magic2_d &magic2_e &magic2_f &magic2_g &magic2_h &magic2_i &magic2_j &magic2_k &magic2_l &magic2_m &magic2_n &magic2_o
-                       &magic2_p &magic2_q &magic2_r &magic2_s &magic2_t &magic2_u &magic2_v &magic2_w &magic2_x &magic2_y &magic2_z &magic2_space &magic2_dot &magic2_comm &magic2_hash >;
+                       &magicR_a &magicR_b &magicR_c &magicR_d &magicR_e &magicR_f &magicR_g &magicR_h &magicR_i &magicR_j &magicR_k &magicR_l &magicR_m &magicR_n &magicR_o
+                       &magicR_p &magicR_q &magicR_r &magicR_s &magicR_t &magicR_u &magicR_v &magicR_w &magicR_x &magicR_y &magicR_z &magicR_space &magicR_dot &magicR_comm &magicR_hash >;
     };
 
 };

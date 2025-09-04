@@ -37,7 +37,7 @@
 /*
 ________|   V   |   D   |   H   |   F   |   W   |                                  |   X   |   Q   |   O   |   U   |   J   |________
 |   `   |   S   |   T   |   N   |   C   |   G   |                                  |   .   |   R   |   A   |   E   |   I   |   '   |
-|magic1 |   Z   |   K   |   M   |   P   |   B   |________                  ________|   ,   |   L   |   /   |   ;   |   Y   |magic2 |
+|magicL |   Z   |   K   |   M   |   P   |   B   |________                  ________|   ,   |   L   |   /   |   ;   |   Y   |magicR |
                                 |   -   | SPACE |  RET  |                  | REPEAT| BSPC  | LSHFT |
 
 | LEFT  | DOWN  |  UP   | RIGHT |  XXX  |                                                          |VOL_UP |  XXX  |VOL_DN |
@@ -45,7 +45,7 @@ ________|   V   |   D   |   H   |   F   |   W   |                               
             bindings = <
                    &kp V            &kp D        &kp H            &kp F          &kp W             &kp X         &kp Q            &kp O         &kp U        &kp J
 &kp GRAVE          &hml LG(LALT) S  &hml LALT T  &hml LSHFT N     &hml LCTRL C   &kp G             &kp DOT       &hmr LCTRL R     &hmr LSHFT A  &hmr LALT E  &hmr LG(LALT) I  &kp SQT
-&mt_magic1 RALT 0  &hml LGUI Z      &kp K        &kp M            &kp P          &kp B             &kp COMMA     &kp L            &kp FSLH      &kp SEMI     &hmr LGUI Y      &mt_magic2 RALT 0
+&mt_magicL RALT 0  &hml LGUI Z      &kp K        &kp M            &kp P          &kp B             &kp COMMA     &kp L            &kp FSLH      &kp SEMI     &hmr LGUI Y      &mt_magicR RALT 0
                                              &lt SYM MINUS    &lt_spc NUM 0  &lt NAV RET       &lt_repeat SYS 0  &lt_bspc FUNC 0  &lt_shift SYM 0
 &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT     XXX                                                           XXX
             >;
@@ -167,7 +167,7 @@ ___        ___       ___     ___     ___                                        
 /*
 ________|  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |                                  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |________
 | BT 4  | BT 3  | BT 2  | BT 1  | BT 0  |  XXX  |                                  |  XXX  | EP_ON |EP_OFF |  XXX  |  XXX  |  XXX  |
-|BT CLR |  XXX  |  XXX  |  USB  |  BLE  |  XXX  |________                  ________|  XXX  |  DEF  |QWERTY |  XXX  |  XXX  |  XXX  |
+|BT CLR |  XXX  |  USB  |  BLE  |  TOG  |  XXX  |________                  ________|  XXX  |  DEF  |QWERTY |  XXX  |  XXX  |  XXX  |
                                 |  ___  |  ___  |  ___  |                  |  ___  | BOOT  |  ___  |
 
 |  ___  |  ___  |  ___  |  ___  |  ___  |                                                          |  ___  |  ___  |  ___  |
@@ -175,7 +175,7 @@ ________|  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |                               
             bindings = <
               XXX           XXX           XXX           XXX           XXX                XXX  XXX                XXX                XXX  XXX
 &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  XXX                XXX  &ext_power EP_ON   &ext_power EP_OFF  XXX  XXX  XXX
-&bt BT_CLR    XXX           XXX           &out OUT_USB  &out OUT_BLE  XXX                XXX  &to DEF            &to QWERTY         XXX  XXX  XXX
+&bt BT_CLR    XXX           &out OUT_USB  &out OUT_BLE  &out OUT_TOG  XXX                XXX  &to DEF            &to QWERTY         XXX  XXX  XXX
                                           XXX           XXX           XXX                XXX  &bootloader        XXX
 ___  ___  ___  ___   ___                                                                                               ___
             >;

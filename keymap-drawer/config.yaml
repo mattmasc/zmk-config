@@ -10,8 +10,8 @@ parse_config:
     '&caps_word': Caps Word
     '&leader': Leader
     '&num_word': Num Word
-    '&magic1': Magic 1
-    '&magic2': Magic 2
+    '&magicL': 🪄 L
+    '&magicR': 🪄 R
     '&key_repeat': ⟳
 
     '&mc_selword': SelWord
@@ -30,7 +30,7 @@ parse_config:
     '&mc_dqt_open': '"⏎"'
     '&mc_sqt_pair': "'|'"
     '&mc_sqt_open': "'⏎'"
-    '&mc_dot_spc': '.␣Shift'
+    '&mc_dot_spc': '.␣↑'
 
     '&nds GRAVE': '`␣'
     '&nds DQT': '"␣'

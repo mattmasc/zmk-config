@@ -36,7 +36,7 @@
     HOLD_TAP(lt_bspc, &mo, &morph_bspc)
     HOLD_TAP(lt_repeat, &mo, &morph_repeat)
 
-    HOLD_TAP(mt_magic1, &kp, &morph_magic1)
-    HOLD_TAP(mt_magic2, &kp, &morph_magic2)
+    HOLD_TAP(mt_magicL, &kp, &morph_magicL)
+    HOLD_TAP(mt_magicR, &kp, &morph_magicR)
 
 };

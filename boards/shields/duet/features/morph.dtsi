@@ -34,8 +34,8 @@
     SIMPLE_MORPH(morph_spc, SFT, &kp SPACE, &mc_dot_spc)
     SIMPLE_MORPH(morph_bspc, SFT, &kp BSPC, &kp DEL)
 
-    SIMPLE_MORPH(morph_magic1, CTL, &magic1, &nds GRAVE)
-    SIMPLE_MORPH(morph_magic2, CTL, &magic2, &nds SQT)
+    SIMPLE_MORPH(morph_magicL, CTL, &magicL, &nds GRAVE)
+    SIMPLE_MORPH(morph_magicR, CTL, &magicR, &nds SQT)
 
     DOUBLE_MORPH(morph_repeat, &key_repeat, &num_word, &leader)
     DOUBLE_MORPH(morph_shift, &sk LSHFT, &kp CAPS, &caps_word)
